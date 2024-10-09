@@ -69,11 +69,18 @@ async def upload_images(
 
         # Construct the command
         command = [
-           sys.executable,
+            sys.executable,
             "inference.py",
-            "--source_image", image_path,
-            "--result_dir", video_path,
-            "--input_yaw", "-20", "30", "10"
+            "--input_image", image_path,             # Đường dẫn đến avatar ảnh
+            "--result_dir", video_path,              # Thư mục để lưu kết quả video
+            "--enhancer", "gfpgan",                  # Sử dụng GFPGAN để cải thiện khuôn mặt
+            "--background_enhancer", "realesrgan",   # Sử dụng Real-ESRGAN để cải thiện nền video
+            "--still", "False",                      # Cho phép chuyển động đầu
+            "--input_yaw", "180",                    # Góc quay đầu ngang 180 độ
+            "--input_pitch", "180",                  # Góc gật đầu/ngửa đầu 180 độ
+            "--input_roll", "0",                     # Góc nghiêng đầu 0 độ
+            "--expression_scale", "1.5",             # Tăng cường biểu cảm khuôn mặt
+            "--preprocess", "full"                   # Sử dụng ảnh đầy đủ để tạo video
         ]
 
         try:
