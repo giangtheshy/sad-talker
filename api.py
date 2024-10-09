@@ -37,6 +37,14 @@ async def upload_images(
 
     # Define the directory for this case_id
     case_dir = os.path.join(BASE_UPLOAD_DIR, case_id)
+    # delete all files and folder in case id
+    if os.path.exists(case_dir):
+        for file in os.listdir(case_dir):
+            file_path = os.path.join(case_dir, file)
+            if os.path.isfile(file_path):
+                os.remove(file_path)
+            elif os.path.isdir(file_path):
+                os.rmdir(file_path)
     os.makedirs(case_dir, exist_ok=True)
 
     saved_file_paths = []
