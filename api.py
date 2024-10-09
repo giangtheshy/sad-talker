@@ -78,7 +78,7 @@ async def upload_images(
             # "--still", "False",                      # Cho phép chuyển động đầu
             "--input_yaw",  "-90", "90", "10",              # Góc quay đầu ngang 180 độ
             # "--input_pitch",  "-90", "90", "10",                 # Góc gật đầu/ngửa đầu 180 độ
-            "--input_roll", "0",                     # Góc nghiêng đầu 0 độ
+            # "--input_roll", "0",                     # Góc nghiêng đầu 0 độ
             "--expression_scale", "1.5",             # Tăng cường biểu cảm khuôn mặt
             "--preprocess", "full"                   # Sử dụng ảnh đầy đủ để tạo video
         ]
