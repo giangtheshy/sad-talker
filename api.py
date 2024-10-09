@@ -71,7 +71,7 @@ async def upload_images(
         command = [
             sys.executable,
             "inference.py",
-            "--input_image", image_path,             # Đường dẫn đến avatar ảnh
+            "--source_image", image_path,             # Đường dẫn đến avatar ảnh
             "--result_dir", video_path,              # Thư mục để lưu kết quả video
             "--enhancer", "gfpgan",                  # Sử dụng GFPGAN để cải thiện khuôn mặt
             "--background_enhancer", "realesrgan",   # Sử dụng Real-ESRGAN để cải thiện nền video
