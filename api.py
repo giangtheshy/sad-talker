@@ -79,7 +79,7 @@ async def upload_images(
             "--enhancer", "gfpgan",                  # Sử dụng GFPGAN để cải thiện khuôn mặt
             # "--background_enhancer", "realesrgan",   # Sử dụng Real-ESRGAN để cải thiện nền video
             # "--still", "False",                      # Cho phép chuyển động đầu
-            "--input_yaw",  "-90", "90", "10",              # Góc quay đầu ngang 180 độ
+            "--input_yaw",  "-80", "980", "10",              # Góc quay đầu ngang 180 độ
             # "--input_pitch",  "-90", "90", "10",                 # Góc gật đầu/ngửa đầu 180 độ
             # "--input_roll", "0",                     # Góc nghiêng đầu 0 độ
             "--expression_scale", "1.5",             # Tăng cường biểu cảm khuôn mặt
