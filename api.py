@@ -76,7 +76,7 @@ async def upload_images(
             "inference.py",
             "--source_image", image_path,             # Đường dẫn đến avatar ảnh
             "--result_dir", video_path,              # Thư mục để lưu kết quả video
-            "--enhancer", "gfpgan",                  # Sử dụng GFPGAN để cải thiện khuôn mặt
+            # "--enhancer", "gfpgan",                  # Sử dụng GFPGAN để cải thiện khuôn mặt
             # "--background_enhancer", "realesrgan",   # Sử dụng Real-ESRGAN để cải thiện nền video
             # "--still", "False",                      # Cho phép chuyển động đầu
             "--input_yaw",  "-90", "90", "10",              # Góc quay đầu ngang 180 độ
